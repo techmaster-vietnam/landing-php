@@ -197,7 +197,7 @@ a:hover{
 }
 
 .header .content .banner {
-  width: 60%;
+  width: 55%;
 }
 
 .header .content .content_container {
@@ -214,7 +214,7 @@ a:hover{
 }
 
 .header .content .image {
-  width: 40%;
+  width: 45%;
   box-sizing: border-box;
   padding-left: 10px;
   padding-right: 2%;
@@ -529,7 +529,7 @@ a:hover{
   font-family: Lexend;
   color: #000;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 5px;
 }
 
