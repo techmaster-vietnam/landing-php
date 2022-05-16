@@ -671,7 +671,7 @@ a:hover{
 
 .display_container .course_content_container .course_content .track_container {
   width: 100%;
-  background-color: #f2f3f7;
+  /* background-color: #f2f3f7; */
   display: flex;
   height: 100%;
   flex-wrap: wrap;
@@ -682,9 +682,10 @@ a:hover{
   .course_content
   .track_container
   .track_content {
-  width: 70%;
+  width: 73%;
   box-sizing: border-box;
   padding: 40px;
+  background-color: #f2f3f7;
 }
 
 .display_container
@@ -805,24 +806,37 @@ a:hover{
   }
 }
 
+.teacher_whole{
+  width: 100%;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
 .teacher_container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 40px;
+  /* max-width: 1000px; */
+  /* justify-content: center;
+  align-items: center; */
 }
 
 .teacher_container .teacher {
-  width: calc(25% - 30px);
+  width: calc(33% - 40px);
+  min-height: 240px;
   box-sizing: border-box;
-  padding: 40px 15px 40px 15px;
+  padding: 40px 20px 40px 20px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 15px rgb(2 3 3 / 10%);
   box-shadow: 0 0 15px rgb(2 3 3 / 10%);
   border-radius: 10px;
   align-items: flex-start;
   justify-content: left;
-  margin-bottom: 30px;
+  /* min-height: 470px; */
+  margin-bottom: 40px;
+  margin: 0 20px;
 }
 
 .teacher_container .teacher .teacher_img {
@@ -840,6 +854,42 @@ a:hover{
   border-radius: 50%;
 }
 
+.click-zoom input[type=checkbox] {
+  display: none
+}
+
+.click-zoom img {
+  /* margin: 100px; */
+  transition: transform 0.25s ease;
+  cursor: zoom-in
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(2);
+  cursor: zoom-out
+}
+
+
+
+.teacher_container .teacher .cert_img {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teacher_container .teacher .cert_img label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.teacher_container .teacher .cert_img img {
+  width: 80%;
+}
+
 .teacher_container .teacher .teacher_name {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
@@ -848,15 +898,30 @@ a:hover{
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 10px;
-  color:#0e62d6;
+  color: #0e62d6;
 }
 
-.teacher_container .teacher .teacher_details p {
+/* .teacher_container .teacher:hover .teacher_name {
+  color: #Ff9a00;
+  transition: 00.5s;
+} */
+
+.teacher_container .teacher:hover .teacher_name {
+  color:#1644b8;
+  transition: 00.5s;
+}
+
+.teacher_container .teacher .teacher_position {
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 16px;
   text-align: center;
   line-height: 2.3rem;
+  color: #000;
+}
+
+.teacher_container .teacher .teacher_details ul{
+  margin-top: 20px;
 }
 
 .teacher_container .teacher .teacher_details li {
@@ -865,6 +930,7 @@ a:hover{
   font-size: 16px;
   text-align: left;
   line-height: 2.3rem;
+  color: #000;
 }
 
 @media (max-width: 1024px) and (min-width: 641px) {
@@ -874,6 +940,11 @@ a:hover{
     display: flex;
     min-height: 0;
     padding: 0;
+  }
+
+  .teacher_container .teacher a{
+    display: flex;
+    height: 100%;
   }
 
   .teacher .teacher_info {
@@ -896,6 +967,10 @@ a:hover{
     padding: 40px 20px 40px 20px;
     box-sizing: border-box;
   }
+
+  .teacher_container .teacher .cert_img img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -905,6 +980,7 @@ a:hover{
     min-height: 0px;
   }
 }
+
 
 
 .infographic_container{
