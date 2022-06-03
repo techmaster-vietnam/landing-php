@@ -1841,3 +1841,27 @@ body.preventScroll {
   }
   
 }
+
+
+.logo_container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; 
+}
+
+.logo_container .logo{
+  width: 12.5%;
+  box-sizing: border-box;
+  padding: 10px 10px;
+}
+
+.logo_container .logo img{
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .logo_container .logo{
+    width: 25%;
+  }
+}
