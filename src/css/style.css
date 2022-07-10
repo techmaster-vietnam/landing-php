@@ -1679,7 +1679,7 @@ body.preventScroll {
   width: 100%;
   box-sizing: border-box;
   padding: 20px 20px;
-  min-height: 330px;
+  min-height: 250px;
 }
 
 
@@ -1696,7 +1696,7 @@ body.preventScroll {
 }
 
 .blog_container .blog:hover .content .title{
-  color: #Ff9a00;
+  color: #0e62d6;
   transition: 0.5s;
 }
 
