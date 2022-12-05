@@ -1059,16 +1059,15 @@ a:hover {
 
 .fee_container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* max-width: 840px; */
   width: 100%;
   flex-wrap: wrap;
-  gap: 40px;
 }
 
 .fee_container .fee {
   position: relative;
-  /* width: calc(40% - 20px); */
+  width: calc(33% - 20px);
   min-height: 240px;
   box-sizing: border-box;
   padding: 40px 20px 40px 20px;
@@ -1080,7 +1079,6 @@ a:hover {
   align-items: center;
   justify-content: center;
   min-height: 470px;
-  max-width: 400px;
 }
 
 .fee_container .fee img {
