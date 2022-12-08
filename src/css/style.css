@@ -1059,6 +1059,7 @@ a:hover {
 
 .fee_container {
   display: flex;
+  gap: 34px;
   justify-content: space-between;
   /* max-width: 840px; */
   width: 100%;
