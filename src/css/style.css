@@ -1056,7 +1056,25 @@ a:hover {
   align-items: center;
   margin-top: 60px;
 }
-
+.faq-item {
+  background-color: #fff;
+  padding: 12px 24px !important;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.faq-item:hover {
+  color: #0e62d6 !important;
+}
+.faq-question {
+  font-weight: 700;
+  margin: 8px 0;
+}
+.faq-answer {
+  display: none;
+  color: #212529 !important;
+}
 .fee_container {
   display: flex;
   gap: 34px;

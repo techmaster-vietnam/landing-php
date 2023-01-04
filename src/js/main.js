@@ -35,8 +35,6 @@ let body = document.querySelector("body");
 let linklist = document.getElementById("link-list");
 let nav_item = document.querySelectorAll(".nav_category");
 
-
-
 let flag = false;
 
 bar.onclick = function () {
@@ -55,46 +53,40 @@ closebar.onclick = function () {
   }, 200);
 };
 
-
-
-nav_item.forEach(function(btn){
-  btn.addEventListener('click', function() {
+nav_item.forEach(function (btn) {
+  btn.addEventListener("click", function () {
     navbar.style.width = "0px";
     body.style.overflowY = "inherit";
     linklist.style.display = "none";
     setTimeout(function () {
       bar.style.visibility = "inherit";
     }, 200);
-  })
-})
-
-
+  });
+});
 
 let question_icon = document.querySelectorAll(".question_icon");
 
-question_icon.forEach(function(btn){
-    btn.addEventListener('click', function() {
-        let question_info = this.parentElement.parentElement.querySelector(".question_item");
-        if(question_info.style.display == "block"){
-          question_info.style.display = "none";
-            this.querySelector("img").src = "img/down-arrow.svg"
-            
-        }
-        else if(question_info.style.display == "none"){
-          question_info.style.display = "block";
-            this.querySelector("img").src = "img/up-arrow.svg"
-
-        }
-    })
-})
+question_icon.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    let question_info =
+      this.parentElement.parentElement.querySelector(".question_item");
+    if (question_info.style.display == "block") {
+      question_info.style.display = "none";
+      this.querySelector("img").src = "img/down-arrow.svg";
+    } else if (question_info.style.display == "none") {
+      question_info.style.display = "block";
+      this.querySelector("img").src = "img/up-arrow.svg";
+    }
+  });
+});
 
 console.log(question_icon);
 
-question_icon.forEach(function(btn){
-  question_icon.onclick = function(){
-        console.log("hi");
-    }
-})
+question_icon.forEach(function (btn) {
+  question_icon.onclick = function () {
+    console.log("hi");
+  };
+});
 
 function checkValid(name, phone, email) {
   let valid = true;
@@ -188,7 +180,7 @@ document.getElementById("btn-register").addEventListener("click", function (e) {
         toggleModal();
       },
       error: function (result) {
-        console.error(result)
+        console.error(result);
       },
     });
   }
@@ -253,85 +245,79 @@ let isDemoVideoLoaded = false;
 //   }
 // });
 
-$(window).scroll(function() {
-  var scrollDistance = $(window).scrollTop();
+$(window)
+  .scroll(function () {
+    var scrollDistance = $(window).scrollTop();
 
-  // Show/hide menu on scroll
-  //if (scrollDistance >= 850) {
-  //		$('nav').fadeIn("fast");
-  //} else {
-  //		$('nav').fadeOut("fast");
-  //}
+    // Show/hide menu on scroll
+    //if (scrollDistance >= 850) {
+    //		$('nav').fadeIn("fast");
+    //} else {
+    //		$('nav').fadeOut("fast");
+    //}
 
-  // Assign active class to nav links while scolling
-  $('.menu-section').each(function(i) {
-      if (($(this).position().top)<= scrollDistance) {
-          $('.nav_category a.active').removeClass('active');
-          $('.nav_category a').eq(i).addClass('active');
+    // Assign active class to nav links while scolling
+    $(".menu-section").each(function (i) {
+      if ($(this).position().top <= scrollDistance) {
+        $(".nav_category a.active").removeClass("active");
+        $(".nav_category a").eq(i).addClass("active");
       }
+    });
 
-     
-  });
+    if (scrollDistance > 100) {
+      // $('.nav_bar').css("background-color","#233329");
+      $(".nav_bar").addClass("nav_bar_active");
+    }
 
-  if (scrollDistance > 100){
-    // $('.nav_bar').css("background-color","#233329");
-    $('.nav_bar').addClass("nav_bar_active")
-  }   
+    if (scrollDistance < 100) {
+      // $('.nav_bar').css("background-color","none");
+      $(".nav_bar").removeClass("nav_bar_active");
+    }
 
-  if (scrollDistance < 100){
-    // $('.nav_bar').css("background-color","none");
-    $('.nav_bar').removeClass("nav_bar_active")
-  }   
+    // $('.nav_bar').onclick = function () {
+    //   console.log("nav bar");
+    //   if (scrollDistance > 10){
+    //     $(this).style.backgroundColor = "#233329";
+    //   }
+    // };
 
-  // $('.nav_bar').onclick = function () {
-  //   console.log("nav bar");
-  //   if (scrollDistance > 10){
-  //     $(this).style.backgroundColor = "#233329";
-  //   }   
-  // };
-  
-
-  // if (scrollDistance > 10){
-  //   $('.nav_bar').style.backgroundColor = "#233329";
-  // } 
-
-}).scroll();
-
-
+    // if (scrollDistance > 10){
+    //   $('.nav_bar').style.backgroundColor = "#233329";
+    // }
+  })
+  .scroll();
 
 var slideIndex = 1;
 
 let dot_bar = document.getElementById("dot_bar");
 var allslides = document.getElementsByClassName("mySlides");
 
-for(let i = 1; i<=allslides.length; i++){
+for (let i = 1; i <= allslides.length; i++) {
   dot_bar.innerHTML += `
     <span class="dot"></span>
-  `
+  `;
 }
 
 let dot = document.getElementsByClassName("dot");
 
 $.each(dot, function (index, icon) {
-  console.log("index ",  index, icon);
-  icon.addEventListener('click', function(){
-      slideIndex = index + 1;
-      console.log(slideIndex);
-      showSlides(slideIndex);
-    })
+  console.log("index ", index, icon);
+  icon.addEventListener("click", function () {
+    slideIndex = index + 1;
+    console.log(slideIndex);
+    showSlides(slideIndex);
+  });
 });
-
-
 
 showSlides(slideIndex);
 
 let prev_btn = document.getElementById("prev_btn");
 
-prev_btn.addEventListener('click', function() {
+prev_btn.addEventListener("click", function () {
   slideIndex--;
   console.log(slideIndex);
   showSlides(slideIndex);
-})
+});
 
 prev_btn.addEventListener("click", function () {
   console.log("hello");
@@ -339,57 +325,60 @@ prev_btn.addEventListener("click", function () {
 
 let next_btn = document.getElementById("next_btn");
 
-next_btn.addEventListener('click', function() {
+next_btn.addEventListener("click", function () {
   slideIndex++;
   console.log(slideIndex);
   showSlides(slideIndex);
-})
-
+});
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
-      // console.log("i m called");
-      slides[i].style.display = "none";  
+    // console.log("i m called");
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" slide_active", "");
+    dots[i].className = dots[i].className.replace(" slide_active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " slide_active";
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " slide_active";
 }
-
 
 let track_content = document.querySelectorAll(".track_content");
 
-track_content.forEach(function(btn){
-    btn.addEventListener('click', function() {
-        let course_info = this.querySelector(".list");
-        if(course_info === null){
-          this.style.cursor = "auto";
-        }
-        else {
-          if(course_info.style.display == ""){
-            course_info.style.display = "block";
-            console.log(this.src);
-            this.querySelector("toggle_btn").src = "img/up-arrow.svg"
-          }
-          else if(course_info.style.display == "block"){
-              console.log("block");
-              course_info.style.display = "none";
-              this.querySelector("toggle_btn").src = "img/down-arrow.svg"
-              
-          }
-          else if(course_info.style.display == "none"){
-              course_info.style.display = "block";
-              console.log(this.src);
-              this.querySelector("toggle_btn").src = "img/up-arrow.svg"
-
-          }
-        }
-    })
-})
+track_content.forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    let course_info = this.querySelector(".list");
+    if (course_info === null) {
+      this.style.cursor = "auto";
+    } else {
+      if (course_info.style.display == "") {
+        course_info.style.display = "block";
+        console.log(this.src);
+        this.querySelector("toggle_btn").src = "img/up-arrow.svg";
+      } else if (course_info.style.display == "block") {
+        console.log("block");
+        course_info.style.display = "none";
+        this.querySelector("toggle_btn").src = "img/down-arrow.svg";
+      } else if (course_info.style.display == "none") {
+        course_info.style.display = "block";
+        console.log(this.src);
+        this.querySelector("toggle_btn").src = "img/up-arrow.svg";
+      }
+    }
+  });
+});
+function ShowQuestion() {
+  $(".faq-item").on("click", function (e) {
+    $(e.target.closest(".faq-item")).children().next().fadeToggle();
+  });
+}
+ShowQuestion();
