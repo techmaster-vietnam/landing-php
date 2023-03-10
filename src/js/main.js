@@ -362,7 +362,6 @@ track_content.forEach(function (btn) {
     } else {
       if (course_info.style.display == "") {
         course_info.style.display = "block";
-        // course_info.style.display = "block";
         console.log(this.src);
         this.querySelector("toggle_btn").src = "img/up-arrow.svg";
       } else if (course_info.style.display == "block") {
