@@ -1025,7 +1025,7 @@ a:hover {
 .fee_container {
   display: flex;
   gap: 30px;
-  justify-content: space-between;
+  justify-content: center;
   /* max-width: 840px; */
   width: 100%;
   flex-wrap: wrap;
@@ -1079,6 +1079,11 @@ a:hover {
   text-align: center;
 }
 
+.txt-special {
+  font-weight: bold;
+  color: var(--orange) !important;
+}
+
 .fee_container .fee .fee_content .fee_number .number {
   font-family: "Lexend", sans-serif;
   text-transform: uppercase;
@@ -1116,6 +1121,10 @@ a:hover {
 }
 
 @media (max-width: 992px) {
+  .fee_container {
+    justify-content: space-between;
+  }
+
   .fee_container .fee {
     width: calc(50% - 20px);
   }
