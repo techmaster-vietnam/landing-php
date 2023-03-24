@@ -1,4 +1,3 @@
-
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
@@ -14,31 +13,32 @@ module.exports = {
       import: "./src/js/bootstrapJSEntry.js",
       filename: "js/bootstrapJSEntry.[contenthash].js",
     },
-    main: { 
-      import: "./src/js/main.js", 
+    main: {
+      import: "./src/js/main.js",
       filename: "js/main.[contenthash].js",
     },
   },
   output: {
     filename: "resources/js/bundle.[contenthash].js",
-    path: `${__dirname}/dist`, 
+    path: `${__dirname}/dist`,
     assetModuleFilename: "img/[name].[contenthash][ext][query]",
     clean: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({ 
-      template: "./src/index.html", 
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
       inject: "body",
       chunks: ["bootstrapSCSSEntry", "bootstrapJSEntry", "main"],
-      filename: "index.html", 
+      filename: "index.html",
     }),
-    new MiniCssExtractPlugin({ 
+    new MiniCssExtractPlugin({
       filename: "css/[name].[contenthash].css",
     }),
     new CopyPlugin({
       patterns: [
         { from: "./src/img", to: "img" },
-        { from: "./src/robots.txt", to: "robots.txt" }
+        { from: "./src/files", to: "files" },
+        { from: "./src/robots.txt", to: "robots.txt" },
       ],
     }),
     new webpack.ProvidePlugin({
