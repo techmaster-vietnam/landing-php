@@ -382,3 +382,33 @@ function ShowQuestion() {
   });
 }
 ShowQuestion();
+
+$(document).ready(function(){
+  // Zalo contact
+  $(".button__zalo").on("click", function (e) {
+    const $toggleZalo = $(this).siblings(".overlay");
+    $toggleZalo.fadeToggle();
+    if ($toggleZalo.is(":visible")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "auto");
+    }
+
+    // Thêm lắng nghe sự kiện "click" trên phần tử "overlay"
+    $toggleZalo.on("click", function (e) {
+      // Kiểm tra xem sự kiện được kích hoạt có từ phần tử "overlay" hay không
+      if (e.target === this) {
+        // Nếu không phải, ẩn lớp overlay và đặt lại trạng thái "overflow" cho phần tử "body"
+        $(this).fadeOut();
+        $("body").css("overflow", "auto");
+      }
+    });
+  });
+
+  $(".close__button").on("click", function (e) {
+    e.preventDefault();
+    const $toggleZalo = $(this).parents(".overlay");
+    $toggleZalo.fadeToggle();
+    $("body").css("overflow", "auto");
+  });
+})

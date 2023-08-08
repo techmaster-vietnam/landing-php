@@ -1870,3 +1870,113 @@ body.preventScroll {
     width: 25%;
   }
 }
+
+/* Call to action Zalo */
+/* CTA zalo */
+/* Contact Button zalo */
+#call__to-zalo {}
+
+/* Button zalo */
+.button__zalo {
+  position: fixed;
+  right: 25px;
+  bottom: 35px;
+  z-index: 100;
+  width: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: waveRotate 1s linear infinite;
+}
+
+.zalo__img img,
+.button__zalo img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+#call__to-zalo .overlay {
+  position: fixed;
+  display: none;
+  inset: 0;
+  z-index: 9999;
+  overflow: auto;
+  background-color: rgba(204, 204, 204, 0.7)
+}
+
+#call__to-zalo .content__zalo {
+  margin-block: 50px;
+  max-width: 450px;
+  padding: 50px;
+  border-radius: 20px;
+  margin-inline: auto;
+  background: #fff;
+  position: relative;
+}
+
+#call__to-zalo .content__zalo h5,
+#call__to-zalo .content__zalo h6 {
+  text-align: center;
+}
+
+.zalo__img {
+  margin-inline: auto;
+  margin-bottom: 30px;
+  max-width: 250px;
+}
+
+.zalo__link {
+  text-align: center;
+}
+
+.zalo__link h3 {
+  margin: 0;
+}
+
+.zalo__link a {
+  display: block;
+  margin-top: 6px;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+#call__to-zalo .close__button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding-inline: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.close__button:hover {
+  color: #000;
+  background: #ccc;
+}
+
+@keyframes waveRotate {
+  0% {
+    box-shadow: 0 0 0 0 #e1e1e1;
+  }
+
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    box-shadow: 0 0 0 15px hsla(0, 0%, 88.2%, 0);
+  }
+}
+
+@media screen and (max-width:576px) {
+  #call__to-zalo .content__zalo {
+    padding: 12px;
+  }
+}
