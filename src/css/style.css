@@ -19,10 +19,12 @@ a:hover {
   /* background-color: #000000d1; */
 
   background: rgb(61, 75, 193);
-  background: linear-gradient(142deg,
-      rgba(32, 10, 153, 1) 0%,
-      rgba(14, 98, 214, 1) 35%,
-      rgba(61, 75, 193, 1) 100%);
+  background: linear-gradient(
+    142deg,
+    rgba(32, 10, 153, 1) 0%,
+    rgba(14, 98, 214, 1) 35%,
+    rgba(61, 75, 193, 1) 100%
+  );
 
   background-image: url("../img/gradient.png");
   background-position: center;
@@ -521,9 +523,11 @@ a:hover {
   border-radius: 8px;
   font-size: 18px;
   color: #2c8cf4;
-  background: linear-gradient(140deg,
-      rgba(146, 205, 250, 0.5) 0%,
-      rgba(215, 215, 255, 0.4) 100%);
+  background: linear-gradient(
+    140deg,
+    rgba(146, 205, 250, 0.5) 0%,
+    rgba(215, 215, 255, 0.4) 100%
+  );
 }
 
 .section .section_container .content .content_details .benefit .content {
@@ -541,7 +545,13 @@ a:hover {
   margin-bottom: 5px;
 }
 
-.section .section_container .content .content_details .benefit .content .detail {
+.section
+  .section_container
+  .content
+  .content_details
+  .benefit
+  .content
+  .detail {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -695,7 +705,11 @@ a:hover {
   flex-wrap: wrap;
 }
 
-.display_container .course_content_container .course_content .track_container .track_content {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_content {
   width: 73%;
   box-sizing: border-box;
   padding: 20px 30px 0px 30px;
@@ -703,7 +717,12 @@ a:hover {
   cursor: pointer;
 }
 
-.display_container .course_content_container .course_content .track_container .track_content .title {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_content
+  .title {
   font-family: "Lexend", sans-serif;
   /* text-transform: uppercase; */
 
@@ -715,17 +734,34 @@ a:hover {
   justify-content: space-between;
 }
 
-.display_container .course_content_container .course_content .track_container .track_content .title img {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_content
+  .title
+  img {
   cursor: pointer;
   width: 10px;
   /* display: none; */
 }
 
-.display_container .course_content_container .course_content .track_container .track_content .list {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_content
+  .list {
   display: none;
 }
 
-.display_container .course_content_container .course_content .track_container .track_content .list li {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_content
+  .list
+  li {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -733,32 +769,61 @@ a:hover {
   line-height: 2.3rem;
 }
 
-.display_container .course_content_container .course_content .track_container .track_image {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_image {
   width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.display_container .course_content_container .course_content .track_container .track_image .track_image_container {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_image
+  .track_image_container {
   width: 50%;
 }
 
-.display_container .course_content_container .course_content .track_container .track_image .track_image_container img {
+.display_container
+  .course_content_container
+  .course_content
+  .track_container
+  .track_image
+  .track_image_container
+  img {
   width: 100%;
   border-radius: 10px;
 }
 
 @media (max-width: 768px) {
-  .display_container .course_content_container .course_content .track_container .track_content .list li {
+  .display_container
+    .course_content_container
+    .course_content
+    .track_container
+    .track_content
+    .list
+    li {
     font-size: 16px;
   }
 
-  .display_container .course_content_container .course_content .track_container .track_content {
+  .display_container
+    .course_content_container
+    .course_content
+    .track_container
+    .track_content {
     width: 100%;
   }
 
-  .display_container .course_content_container .course_content .track_container .track_image {
+  .display_container
+    .course_content_container
+    .course_content
+    .track_container
+    .track_image {
     display: none;
   }
 }
@@ -775,11 +840,21 @@ a:hover {
     margin-left: 0;
   }
 
-  .display_container .course_content_container .course_content .track_container .track_content {
+  .display_container
+    .course_content_container
+    .course_content
+    .track_container
+    .track_content {
     padding: 20px;
   }
 
-  .display_container .course_content_container .course_content .track_container .track_content .list ul {
+  .display_container
+    .course_content_container
+    .course_content
+    .track_container
+    .track_content
+    .list
+    ul {
     padding-left: 20px;
   }
 }
@@ -842,7 +917,7 @@ a:hover {
   cursor: zoom-in;
 }
 
-.click-zoom input[type="checkbox"]:checked~img {
+.click-zoom input[type="checkbox"]:checked ~ img {
   transform: scale(2);
   cursor: zoom-out;
 }
@@ -1640,7 +1715,6 @@ body.preventScroll {
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
-
   .prev,
   .next,
   .text {
@@ -1874,7 +1948,9 @@ body.preventScroll {
 /* Call to action Zalo */
 /* CTA zalo */
 /* Contact Button zalo */
-#call__to-zalo {}
+#call__to-zalo {
+  position: relative;
+}
 
 /* Button zalo */
 .button__zalo {
@@ -1902,17 +1978,19 @@ body.preventScroll {
   inset: 0;
   z-index: 9999;
   overflow: auto;
-  background-color: rgba(204, 204, 204, 0.7)
+  background-color: rgba(204, 204, 204, 0.7);
 }
 
 #call__to-zalo .content__zalo {
-  margin-block: 50px;
+  width: 100%;
+  height: fit-content;
   max-width: 450px;
   padding: 50px;
   border-radius: 20px;
-  margin-inline: auto;
   background: #fff;
-  position: relative;
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #call__to-zalo .content__zalo h5,
@@ -1949,7 +2027,7 @@ body.preventScroll {
   padding-inline: 6px;
   border-radius: 5px;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .close__button:hover {
@@ -1975,7 +2053,7 @@ body.preventScroll {
   }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   #call__to-zalo .content__zalo {
     padding: 12px;
   }
