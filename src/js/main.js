@@ -1,6 +1,10 @@
+/* purgecss start ignore */
+// Các class động được sử dụng
+// .valid, .invalid
+/* purgecss end ignore */
+
 import "../css/style.css";
 import "lazysizes";
-import { Modal } from "bootstrap";
 
 //passive scroll Jquery
 jQuery.event.special.touchstart = {

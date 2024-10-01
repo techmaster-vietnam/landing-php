@@ -2,16 +2,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const CopyPlugin = require("copy-webpack-plugin");
+const path = require('path');
+const glob = require('glob');
+const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 
 module.exports = {
   entry: {
     bootstrapSCSSEntry: {
       import: "./src/js/bootstrapSCSSEntry.js",
       filename: "js/bootstrapSCSSEntry.[contenthash].js",
-    },
-    bootstrapJSEntry: {
-      import: "./src/js/bootstrapJSEntry.js",
-      filename: "js/bootstrapJSEntry.[contenthash].js",
     },
     main: {
       import: "./src/js/main.js",
@@ -45,6 +44,10 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery",
+    }),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, { nodir: true }),
+      safelist: ['lazyload', 'lazyloaded'] // Thêm các class bạn muốn giữ lại
     }),
   ],
   module: {
