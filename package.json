@@ -5,7 +5,8 @@
   "main": "webpack.common.js",
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js --port 4000",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "checkImg": "node checkUnusedImages.js"
   },
   "keywords": [],
   "author": "",

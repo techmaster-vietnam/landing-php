@@ -207,54 +207,10 @@ $(window).on("scroll", function () {
 });
 
 let isDemoVideoLoaded = false;
-/* Lazyload video */
-// $(window).on("scroll", function () {
-//   if (!isDemoVideoLoaded) {
-//     var hT = $("#product").offset().top,
-//       hH = $("#product").outerHeight(),
-//       wH = $(window).height(),
-//       wS = $(this).scrollTop();
-//     if (wS > hT + hH - wH) {
-//       $(".video_container").html(`
-//       <div class="video">
-//         <iframe width="560" height="315" src="https://www.youtube.com/embed/1oJu87Fw2Pg"
-//           title="YouTube video player" frameborder="0"
-//           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//           allowfullscreen>
-//         </iframe>
-//         <a href="https://www.youtube.com/watch?v=1oJu87Fw2Pg">
-//             <div class="video_name">
-//                 HƯỚNG DẪN LẬP TRÌNH GAME TETRIS
-//             </div>
-//         </a>
-//         </div>
-//         <div class="video">
-//             <iframe width="560" height="315" src="https://www.youtube.com/embed/gVqWSkYjqeQ"
-//                 title="YouTube video player" frameborder="0"
-//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-//                 allowfullscreen></iframe>
-//             <a href="https://www.youtube.com/watch?v=gVqWSkYjqeQ">
-//                 <div class="video_name">
-//                     HƯỚNG DẪN LẬP TRÌNH GAME FLAPPY BIRD
-//                 </div>
-//             </a>
-//         </div>
-//       `);
-//       isDemoVideoLoaded = true;
-//     }
-//   }
-// });
 
 $(window)
   .scroll(function () {
     var scrollDistance = $(window).scrollTop();
-
-    // Show/hide menu on scroll
-    //if (scrollDistance >= 850) {
-    //		$('nav').fadeIn("fast");
-    //} else {
-    //		$('nav').fadeOut("fast");
-    //}
 
     // Assign active class to nav links while scolling
     $(".menu-section").each(function (i) {
@@ -274,16 +230,6 @@ $(window)
       $(".nav_bar").removeClass("nav_bar_active");
     }
 
-    // $('.nav_bar').onclick = function () {
-    //   console.log("nav bar");
-    //   if (scrollDistance > 10){
-    //     $(this).style.backgroundColor = "#233329";
-    //   }
-    // };
-
-    // if (scrollDistance > 10){
-    //   $('.nav_bar').style.backgroundColor = "#233329";
-    // }
   })
   .scroll();
 

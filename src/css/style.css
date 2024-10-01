@@ -26,7 +26,7 @@ a:hover {
     rgba(61, 75, 193, 1) 100%
   );
 
-  background-image: url("../img/gradient.png");
+  background-image: url("../img/gradient.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -631,7 +631,7 @@ a:hover {
   font-size: 35px;
   margin-bottom: 20px;
   color: #0e62d6;
-  text-align: left;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {
