@@ -1152,6 +1152,7 @@ a:hover {
 .fee_container .fee .fee_content .fee_number {
   display: block;
   text-align: center;
+  height: 50%;
 }
 
 .txt-special {
@@ -1402,6 +1403,7 @@ a:hover {
   /* text-transform: uppercase; */
   padding: 0;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .contact_container .contact_info .contact_details .contact_content .content {

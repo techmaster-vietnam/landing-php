@@ -186,27 +186,6 @@ document.getElementById("btn-register").addEventListener("click", function (e) {
   }
 });
 
-let isMaterialVideoLoaded = false;
-/* Lazyload video */
-$(window).on("scroll", function () {
-  if (!isMaterialVideoLoaded) {
-    var hT = $("#target").offset().top,
-      hH = $("#target").outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-    if (wS > hT + hH - wH) {
-      $(".material .intro_image").html(`
-      <iframe width="560" height="315" class="lazyload" data-src="https://www.youtube.com/embed/1oJu87Fw2Pg"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen></iframe>
-      `);
-      isMaterialVideoLoaded = true;
-    }
-  }
-});
-
-let isDemoVideoLoaded = false;
 
 $(window)
   .scroll(function () {
