@@ -5,7 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 const glob = require('glob');
 const PurgeCSSPlugin = require('purgecss-webpack-plugin');
-
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -56,6 +56,13 @@ module.exports = {
       paths: glob.sync(`${path.join(__dirname, 'src')}/**/*`, { nodir: true }),
       safelist: ['lazyload', 'lazyloaded'] // Thêm các class bạn muốn giữ lại
     }),
+    new CompressionPlugin({
+      filename: '[path][base].gz',
+      algorithm: 'gzip',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ],
   module: {
     rules: [
