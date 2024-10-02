@@ -75,7 +75,7 @@ a:hover {
 }
 
 .header .nav_bar .nav_bar_container .nav_menu .nav_category {
-  font-family: "Lexend", sans-serif;
+  /* font-family: "Lexend", sans-serif; */
   font-weight: 800;
   font-size: 17px;
   box-sizing: border-box;
@@ -160,7 +160,7 @@ a:hover {
 }
 
 .nav-bar .link_list a {
-  font-family: "Lexend", sans-serif;
+  /* font-family: "Lexend", sans-serif; */
   font-size: 12px;
   letter-spacing: 0.05rem;
   display: block;

@@ -57,11 +57,7 @@ module.exports = {
       safelist: ['lazyload', 'lazyloaded'] // Thêm các class bạn muốn giữ lại
     }),
     new CompressionPlugin({
-      filename: '[path][base].gz',
       algorithm: 'gzip',
-      test: /\.(js|css|html|svg)$/,
-      threshold: 10240,
-      minRatio: 0.8
     })
   ],
   module: {

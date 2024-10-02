@@ -1,8 +1,6 @@
 export function initYoutube() {
-    console.log("youtube");
-
+    
     const getLinkVideo = (id) => {
-        console.log(id);
         switch (id) {
             case "thumbnailVideo1":
                 return "kK6xchWwXgE";
