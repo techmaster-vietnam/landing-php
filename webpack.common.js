@@ -18,10 +18,16 @@ module.exports = {
     },
   },
   output: {
-    filename: "resources/js/bundle.[contenthash].js",
-    path: `${__dirname}/dist`,
+    filename: "js/[name].[contenthash].js",
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
     assetModuleFilename: "img/[name].[contenthash][ext][query]",
     clean: true,
+  },
+    optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
