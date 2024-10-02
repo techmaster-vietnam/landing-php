@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js --port 4000",
     "build": "webpack --config webpack.prod.js",
-    "checkImg": "node checkUnusedImages.js"
+    "checkImg": "node checkUnusedImages.js",
+    "convertImage": "node unuseClean.js && node extReplace.js && node webpConvert.js"
   },
   "keywords": [],
   "author": "",
@@ -38,6 +39,7 @@
     "lazyframe": "^2.2.4",
     "lazysizes": "^5.3.2",
     "popper.js": "^1.16.1",
+    "sharp": "^0.33.5",
     "toastr": "^2.1.4"
   }
 }

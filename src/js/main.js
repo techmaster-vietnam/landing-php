@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (entry.isIntersecting) {
         const moduleName = entry.target.dataset.module;
         loadModule(moduleName);
+        console.log(moduleName);
         observer.unobserve(entry.target);
       }
     });

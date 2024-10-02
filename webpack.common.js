@@ -6,6 +6,7 @@ const path = require('path');
 const glob = require('glob');
 const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 
+
 module.exports = {
   entry: {
     bootstrapSCSSEntry: {

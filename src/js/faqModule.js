@@ -1,5 +1,6 @@
 export function initFAQ() {
   const faqItems = document.querySelectorAll(".faq-item");
+  console.log(faqItems);
 
   faqItems.forEach(item => {
     item.addEventListener("click", function() {
