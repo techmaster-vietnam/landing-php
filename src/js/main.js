@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load scroll module ngay lập tức vì nó không phụ thuộc vào một phần tử cụ thể
   loadModule('zaloContact');
   loadModule('scroll');
+  loadModule('youtube');
 });
 
 

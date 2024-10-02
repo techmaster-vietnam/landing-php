@@ -214,8 +214,70 @@ a:hover {
   justify-content: center;
 }
 
-.header .content .banner img {
+.thumbnailVideo{
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.video1{
   width: 100%;
+  height: 321px;
+  background-image: url(../img/thumbnailVideo1.webp);
+}
+
+.video2{
+  width: 100%;
+  height: 321px;
+  margin-bottom: 5px;
+  border-bottom: 6px solid white;
+  background-image: url(../img/thumbnailVideo2.webp);
+}
+
+.video3{
+  width: 100%;
+  height: 321px;
+  margin-bottom: 5px;
+  border-bottom: 6px solid white;
+  background-image: url(../img/thumbnailVideo3.webp);
+}
+.video4{
+  width: 100%;
+  height: 321px;
+  margin-bottom: 5px;
+  border-bottom: 6px solid white;
+  background-image: url(../img/thumbnailVideo4.webp);
+}
+.video5{
+  width: 100%;
+  height: 321px;
+  margin-bottom: 5px;
+  border-bottom: 6px solid white;
+  background-image: url(../img/thumbnailVideo5.webp);
+}
+
+
+.buttonPlayVideo{
+  background-color: #8f8f8f8a;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+}
+
+.thumbnailVideo:hover .buttonPlayVideo{
+  transform: scale(1.1);
+}
+
+.buttonPlayVideo img{
+  margin-left: 5px;
 }
 
 .header .content .image {

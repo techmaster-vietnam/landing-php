@@ -30,7 +30,7 @@ const sourceFiles = readFilesRecursively(srcDir)
 // Hàm kiểm tra xem một file ảnh có được sử dụng không
 function isImageUsed(imagePath, sourceFiles) {
     const imageName = path.basename(imagePath);
-    const searchPattern = `/${imageName}`;
+    const searchPattern = `${imageName}`;
 
     return sourceFiles.some(sourceFile => {
         const content = fs.readFileSync(sourceFile, 'utf8');
